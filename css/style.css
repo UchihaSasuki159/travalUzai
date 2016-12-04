@@ -258,6 +258,7 @@ body{font-size: 11px;}
 .main .nav .destination_menu .menu_list li{
     position: relative;
     border-bottom: 1px solid #e5e5e5;
+    height: 53px;
 }
 .main .nav .destination_menu .menu_list li dl{
     padding: 3px 12px;
@@ -368,10 +369,7 @@ body{font-size: 11px;}
 .main .banner_wrap .banner .pic{
     font-size: 0;
 }
-.main .banner_wrap .banner .pic img{
-    width: 960px;
-    height: 318px;
-}
+
 .main .banner_wrap .banner ul{
     position: absolute;
     top:288px;
@@ -396,6 +394,7 @@ body{font-size: 11px;}
 }
 .main .banner_wrap .banner .ad{
     font-size: 0;
+    padding-top: 0;
 }
 /*this is section_one*/
 .main .section{padding-top: 7px}
@@ -689,34 +688,37 @@ body{font-size: 11px;}
     content: "";
    /* display: block;*/
     position: absolute;
-    left: -30px;
-    bottom:-40px;
+    left: -20px;
+    bottom:0px;
    /* width: 15px;
     height: 20px;
     overflow: hidden;*/
-    border-right: 30px solid #fff;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
+    border: 10px solid;
+    border-color:transparent #fff #fff transparent;
 
 }
 .main .section .contact_wrap .contact .right .detail_contact .pic{
     float: left;
 }
 .main .section_five .title i{background-position: -235px 5px;}
-.main .section_five .contact_banner{overflow: hidden;}
+.main .section_five .contact_banner{overflow: hidden;position: relative;padding-bottom: 30px;}
 .main .section_five .contact_banner>ul>li{
     float: left;
     margin-right: 10px;
     border: 1px solid #dcdcdc;
-    height: 318px;
     background: #fff;
-    max-width: 277px;
+    width: 210px;
 }
 .main .section_five .contact_banner>ul>li .pic{
-    margin: 5px 5px 2px 5px;
+    padding: 5px 5px 2px 5px;
+
+
+}
+.main .section_five .contact_banner>ul>li .pic a{
+    display: block;
     position: relative;
 }
-.main .section_five .contact_banner>ul>li .pic .title_area{
+.main .section_five .contact_banner>ul>li .pic a .title_area{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -732,7 +734,13 @@ body{font-size: 11px;}
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
 }
-.main .section_five .contact_banner>ul>li .pic .title_area .area{float: left;}
+.main .section_five .contact_banner>ul>li .pic .title_area .area{
+    float: left;
+    white-space: nowrap;
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .main .section_five .contact_banner>ul>li .thoughts{
     padding: 0 5px 5px 5px;
     position: relative;
@@ -794,32 +802,203 @@ body{font-size: 11px;}
     width: 14px;
 }
 .main .section_five .contact_banner>ul>li .bottom .assist p{padding-left: 56%;}
+.main .section_five .contact_banner .pre{
+    position: absolute;
+    top:100px;
+    left: 0;
+    background: url("../images/icon-common-main.png") no-repeat 0 -290px;
+    width: 27px;
+    height: 54px;
+    z-index: 20;
+    cursor: pointer;
+}
+.main .section_five .contact_banner .next{
+    position: absolute;
+    top:100px;
+    right: 0;
+    background: url("../images/icon-common-main.png") no-repeat -40px -290px;
+    width: 27px;
+    height: 54px;
+    z-index: 20;
+    cursor:pointer;
+}
+.main .commit .title_wrap{
+    background-color: #e5004f;
+}
+.main .commit .title dt,.main .commit .title dd{
+    float: left;
+    height:58px;
+    line-height: 58px;
+    color: #fff;
+    font-size: 19px;
+}
+.main .commit .title dt{
+    background: url("../images/icon-dextrad.png") no-repeat right top;
+    padding:0 30px 0 26px;
+}
+.main .commit .title dd{
+    background: url("../images/icon-common-part.png") no-repeat 55px -545px;
+    padding-left: 103px;
+}
+.main .commit .title dd:nth-child(3){background-position: 55px -605px;}
+.main .commit .title dd:nth-child(4){background-position: 55px -665px;}
+.main .commit .title dd:nth-child(5){background-position: 55px -725px;}
+.main .commit .title dd:nth-child(6){background-position: 55px -785px;}
+.main .commit .problem_wrap{padding: 6px 0 20px 0;}
+.main .commit .problem_list{float: left;width: 200px;}
+.main .commit .problem_list dt{
+    font-size: 12px;
+    color: #666;
+    height: 40px;
+    line-height: 40px;
+    font-weight:bold;
+}
+.main .commit .problem_list dd a{
+    display: block;
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+}
+.main .commit .problemLastlist{width: 170px;}
+.main .commit .problemLastlist dt{ padding-bottom: 10px;}
+.main .commit .problemLastlist dd{
+    border: 1px solid #ccc;
+    width: 100px;
+    height: 100px;
+    line-height: inherit;
+    background: url("../images/icon-common-bulky.png") no-repeat -180px -110px;
+}
+.footer{border-bottom: 18px solid #f0f0f0;}
+.footer .footer_sns{
+    border-bottom:1px solid #ccc ;
+    text-align: center;
+}
+.footer .footer_sns ul{padding: 10px 0;}
+.footer .footer_sns li{
+    display: inline-block;
+    text-align: left;
+    border-right: 1px solid #ccc;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 23px 0 66px;
+    background: url("../images/gbsprite.png") no-repeat 15px 2px;
+    font-size: 16px;
+    color: #666;
 
+}
+.footer .footer_sns li:nth-child(2){
+    background-position: 15px -42px;
+}
+.footer .footer_sns li:nth-child(3){
+    background-position: 15px -80px;
+    line-height: inherit;
+    border-right: none;
+}
+.footer .footer_sns li:nth-child(3) p{
+    line-height: 15px;
+    font-size: 11px;
+}
+.footer .footer_sns li:nth-child(3) .email{padding-top: 6px;}
+.footer .footer_sns li:nth-child(3) p a{
+    color: #e5004f;
+    text-decoration: underline;
+}
+.footer .footer_sns li .btn{
+    display: inline-block;
+    padding: 0 7px;
+    height: 19px;
+    line-height: 19px;
+    color: #0099d9;
+    border: 1px solid #ccc;
+    font-size: 11px;
+}
+.footer .webtrust{
+    padding: 16px 0 4px 0;
+    text-align: center;
+}
+.footer .webtrust a{
+    display: inline-block;
+    height: 40px;
+    width: 108px;
+    margin: 0 3px;
+    background: url("../images/gbsprite.png") no-repeat 0 -146px;
+}
+.footer .webtrust a:nth-child(2){background-position: 0 -196px;}
+.footer .webtrust a:nth-child(3){background-position: 0 -342px;}
+.footer .webtrust a:nth-child(4){background-position: 0 -391px;}
+.footer .webtrust a:nth-child(5){background-position: 0 -554px;}
+.footer .webtrust a:nth-child(6){background-position: 0 -439px;}
+.footer .webtrust a:nth-child(7){background-position: 0 -720px;}
+.footer .webtrust a:nth-child(8){background-position: 0 -770px;}
+.footer .copyright{
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    height: 45px;
+    line-height: 45px;
+}
+.footer .copyright span{
+    color:#e5004f;
+}
+.footer .aboutlink{
+    text-align: center;
+    padding-bottom: 21px;
+    border-bottom: 1px solid #efefef;
+}
+.footer .aboutlink ul{
+    display: inline-block;
+}
+.footer .aboutlink ul li{
+    float: left;
+    border-right: 1px solid #999;
+    padding: 0 6px;
+}
+.footer .aboutlink ul li a{
+    display: block;
+    height: 17px;
+    line-height: 17px;
+    color: #666;
 
+}
+.footer .aboutlink ul li a span{
+    color:#e5004f;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.footer .footer_nav{
+    padding:3px 16px 17px 0;
+}
+.footer .footer_nav dl{
+    position: relative;
+    height: 23px;
+    line-height:23px;
+    color: #999;
+    overflow: hidden;
+}
+.footer .footer_nav dl dt{
+    float: left;
+    font-weight:bold;
+}
+.footer .footer_nav dl dt a{display: block;color: #999;}
+.footer .footer_nav dl dd a{display: block;color: #999;}
+.footer .footer_nav dl dd{
+    float: left;
+}
+.footer .footer_nav dl .icon{
+    padding: 2px 3px 0 7px;
+    font-size: 10px;
+}
+.footer .footer_nav dl .arrow{
+    position: absolute;
+    top:9px;
+    right:5px;
+    display:inline-block;
+    width:20px;
+    height:10px;
+    overflow:hidden;
+    line-height:0;
+    font-weight: bold;
+    font-size: 17px;
+}
 
 
 
