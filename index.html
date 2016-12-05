@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="header">
@@ -16,10 +18,16 @@
                     <ul class="clear">
                         <li><a href="javascript:;">登录</a></li>
                         <li class="border"></li>
-                        <li><a href="javascript:;">
+                        <li>
+                            <a href="javascript:;">
                             注册
+                            </a>
                             <span class="fuli">送100元抵用券</span>
-                        </a></li>
+                            <div class="detail">
+                                <p>注册就送100元抵用券，在度假产品订单中，您可以使用抵用券抵用度假产品的付款金额（特价产品不可用）。</p>
+                                <span>◇</span>
+                            </div>
+                        </li>
                         <li class="border"></li>
                         <li><a class="icon" href="javascript:;">
                             会员俱乐部
@@ -27,7 +35,7 @@
                         <li class="border"></li>
                         <li><a href="javascript:;">我的订单</a></li>
                         <li class="border"></li>
-                        <li><a href="javascript:;" class="color">营业网点</a></li>
+                        <li><a class="color" href="javascript:;">营业网点</a></li>
                         <li class="border"></li>
                         <li><a href="javascript:;">最近浏览产品</a></li>
                     </ul>
@@ -36,19 +44,100 @@
         </div>
         <div class="ad inner">
             <a href="javascript:;"><img src="images/04f2a12ceaf84437800f0346969b4fd8.jpg"></a>
+            <span>x</span>
         </div>
         <div class="bottom inner clear">
             <div class="logo">
                 <a href="javascript:;"><img src="images/logo.png"></a>
             </div>
             <div class="area">
-                <a class="clear" href="javascript:;">
-                    <i></i>
-                    <div class="text">
-                        <p class="city">上海</p>
-                        <p class="change">[切换]</p>
-                    </div>
-                </a>
+                <div class="strat_city_wrap">
+                    <a class="clear" href="javascript:;">
+                        <i></i>
+                        <div class="text">
+                            <p class="city">上海</p>
+                            <p class="change">[切换]</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="start_city_choose">
+                    <dl>
+                        <dt>热门出发城市</dt>
+                        <dd class="hot_city">
+                            <a href="javascript:;">上海</a>
+                            <a href="javascript:;">北京</a>
+                            <a href="javascript:;">天津</a>
+                            <a href="javascript:;">成都</a>
+                            <a href="javascript:;">南京</a>
+                            <a href="javascript:;">杭州</a>
+                        </dd>
+                        <dd>
+                            <ul class="clear">
+                                <li>华北</li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul class="clear">
+                                <li>华北</li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul class="clear">
+                                <li>华北</li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul class="clear">
+                                <li>华北</li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul class="clear">
+                                <li>华北</li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                                <li><a href="javascript:;">天津</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
             </div>
             <div class="search_bar">
                 <form class="clear">
@@ -482,6 +571,9 @@
             </div>
         </div>
     </div>
+
+</div>
+<div class="footer">
     <div class="commit">
         <div class="title_wrap">
             <div class="inner">
@@ -544,8 +636,6 @@
             </div>
         </div>
     </div>
-</div>
-<div class="footer">
     <div class="inner">
         <div class="footer_sns">
             <ul class="sns clear">

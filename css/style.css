@@ -32,9 +32,19 @@ body{font-size: 11px;}
     line-height:19px;
     height:19px;
     color:#666;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.header .top .download a:hover{
+    background-position: 0 -407px;
+    color: #e5004f;
 }
 .header .top .nav{float: right;}
 .header .top .nav ul li{
+    position: relative;
     padding: 0 9px;
     float: left;
 }
@@ -45,11 +55,12 @@ body{font-size: 11px;}
     border-left: 1px solid #c8c8c8;
 }
 .header .top .nav ul li a{
-    display: block;
+    display: inline-block;
     line-height:19px;
     height:19px;
     color: #666;
 }
+.header .top .nav ul li a:hover{color: #e5004f;}
 .header .top .nav ul li a.color{
     background: #e5004f;
     padding: 0 5px;
@@ -59,7 +70,7 @@ body{font-size: 11px;}
     background: url("../images/icon-u.png") no-repeat 0 -5px;
     padding-left: 25px;
 }
-.header .top .nav ul li a .fuli{
+.header .top .nav ul li .fuli{
     position: relative;
     margin-left: 5px;
     background: #e5004f;
@@ -67,7 +78,7 @@ body{font-size: 11px;}
     color: #fff;
 
 }
-.header .top .nav ul li a .fuli:before{
+.header .top .nav ul li .fuli:before{
     content: '';
     position: absolute;
     top: 4px;
@@ -75,6 +86,44 @@ body{font-size: 11px;}
     border-bottom: 5px solid transparent;
     border-top: 5px solid transparent;
     border-right:5px solid #e5004f;
+}
+.header .top .nav ul li .detail{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    border: 1px solid #0099d9;
+    top: 23px;
+    left: 50%;
+    margin-left: -148px;
+    padding: 10px;
+    width: 300px;
+    line-height: 18px;
+}
+.header .top .nav ul li .detail span{
+    position: absolute;
+    display: inline-block;
+    top: -5px;
+    left: 50%;
+    margin-left: -5px;
+    width: 10px;
+    height: 5px;
+    overflow: hidden;
+    line-height: 1;
+    color: #0099d9;
+    background-color: #fff;
+    z-index: 15;
+}
+.header>.ad{
+    position: relative;
+}
+.header>.ad span{
+    position: absolute;
+    top:2px;
+    right:10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
 }
 .header .bottom{
     padding: 15px 0 3px;
@@ -87,25 +136,38 @@ body{font-size: 11px;}
     display: block;
 }
 .header .bottom .area{
+    position: relative;
     float: left;
     margin-right: 14px;
-    padding: 0 14px 0 12px;
-    border: 1px solid #fff;
+
+
 }
-.header .bottom .area a{
+.header .bottom .area .strat_city_wrap{
+    border: 1px solid #fff;
+    padding: 0 14px 0 12px;
+    background-color: #fff;
+}
+.header .bottom .area .strat_city_on{
+    position: relative;
+    border-color:#efefef;
+    padding-bottom:1px;
+    z-index: 30;
+    border-bottom: none;
+}
+.header .bottom .area .strat_city_wrap a{
     display: block;
     padding-top: 10px;
 }
-.header .bottom .area a .text{
+.header .bottom .area .strat_city_wrap a .text{
     float: left;
 }
-.header .bottom .area a i{
+.header .bottom .area .strat_city_wrap a i{
     float: left;
     background: url("../images/icon-common-part.png") no-repeat 0 -310px;
     width: 19px;
     height: 29px;
 }
-.header .bottom .area a .text .city{
+.header .bottom .area .strat_city_wrap a .text .city{
     padding-left:19px ;
     font-size: 12px;
     line-height:12px;
@@ -113,12 +175,53 @@ body{font-size: 11px;}
     color: #e5004f;
     letter-spacing: 2px;
 }
-.header .bottom .area a .text .change{
+.header .bottom .area .strat_city_wrap a .text .change{
     padding-left:12px ;
     height: 21px;
     line-height:21px;
     color: #999;
     letter-spacing: 2px;
+}
+.header .bottom .area .start_city_choose{
+    display: none;
+    position: absolute;
+    top:43px;
+    left: 0;
+    border: 1px solid #efefef;
+    background-color: #fff;
+    padding: 0 10px;
+    width: 412px;
+    z-index: 20;
+}
+.header .bottom .area .start_city_choose dt{
+    height: 20px;
+    line-height:20px;
+    color: #999;
+    padding-top: 10px;
+}
+.header .bottom .area .start_city_choose .hot_city{
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 10px;
+}
+.header .bottom .area .start_city_choose .hot_city a{
+    display: inline-block;
+    margin: 0 5px;
+    color: #0099d9;
+    height: 20px;
+    line-height:20px;
+}
+.header .bottom .area .start_city_choose dd ul{
+    height: 30px;
+    line-height:30px;
+}
+.header .bottom .area .start_city_choose dd ul li{
+    float: left;
+    margin-right: 10px;
+}
+.header .bottom .area .start_city_choose dd ul li a{
+    display: block;
+    margin: 0 3px;
+    color: #0099d9;
 }
 .header .bottom .search_bar{
     float: left;
@@ -822,53 +925,55 @@ body{font-size: 11px;}
     z-index: 20;
     cursor:pointer;
 }
-.main .commit .title_wrap{
+
+.footer{border-bottom: 18px solid #f0f0f0;}
+.footer .commit{background-color: #f7f7f7;}
+.footer .commit .title_wrap{
     background-color: #e5004f;
 }
-.main .commit .title dt,.main .commit .title dd{
+.footer .commit .title dt,.footer .commit .title dd{
     float: left;
     height:58px;
     line-height: 58px;
     color: #fff;
     font-size: 19px;
 }
-.main .commit .title dt{
+.footer .commit .title dt{
     background: url("../images/icon-dextrad.png") no-repeat right top;
     padding:0 30px 0 26px;
 }
-.main .commit .title dd{
+.footer .commit .title dd{
     background: url("../images/icon-common-part.png") no-repeat 55px -545px;
     padding-left: 103px;
 }
-.main .commit .title dd:nth-child(3){background-position: 55px -605px;}
-.main .commit .title dd:nth-child(4){background-position: 55px -665px;}
-.main .commit .title dd:nth-child(5){background-position: 55px -725px;}
-.main .commit .title dd:nth-child(6){background-position: 55px -785px;}
-.main .commit .problem_wrap{padding: 6px 0 20px 0;}
-.main .commit .problem_list{float: left;width: 200px;}
-.main .commit .problem_list dt{
+.footer .commit .title dd:nth-child(3){background-position: 55px -605px;}
+.footer .commit .title dd:nth-child(4){background-position: 55px -665px;}
+.footer .commit .title dd:nth-child(5){background-position: 55px -725px;}
+.footer .commit .title dd:nth-child(6){background-position: 55px -785px;}
+.footer .commit .problem_wrap{padding: 6px 0 20px 0;}
+.footer .commit .problem_list{float: left;width: 200px;}
+.footer .commit .problem_list dt{
     font-size: 12px;
     color: #666;
     height: 40px;
     line-height: 40px;
     font-weight:bold;
 }
-.main .commit .problem_list dd a{
+.footer .commit .problem_list dd a{
     display: block;
     color: #666;
     height: 30px;
     line-height: 30px;
 }
-.main .commit .problemLastlist{width: 170px;}
-.main .commit .problemLastlist dt{ padding-bottom: 10px;}
-.main .commit .problemLastlist dd{
+.footer .commit .problemLastlist{width: 170px;}
+.footer .commit .problemLastlist dt{ padding-bottom: 10px;}
+.footer .commit .problemLastlist dd{
     border: 1px solid #ccc;
     width: 100px;
     height: 100px;
     line-height: inherit;
     background: url("../images/icon-common-bulky.png") no-repeat -180px -110px;
 }
-.footer{border-bottom: 18px solid #f0f0f0;}
 .footer .footer_sns{
     border-bottom:1px solid #ccc ;
     text-align: center;
